@@ -52,6 +52,34 @@ def possible_win(p):
 			return cord1
 		elif(rc2 == 2 and cord2 != 0):
 			return cord2
+	rc3,rc4 = 0,0
+	cord3,cord4 = 0, 0
+	if(p == board[0][0]):
+		rc3 += 1
+	if(p == board[1][1]):
+		rc3 += 1
+		rc4 += 1
+	if(p == board[2][2]):
+		rc3 += 1
+	if(p == board[2][0]):
+		rc4 += 1
+	if(p == board[0][2]):
+		rc4 += 1
+	if(' ' == board[0][0]):
+		cord3 = (0,0)
+	if(' ' == board[1][1]):
+		cord3 = (1,1)
+		cord4 = (1,1)
+	if(' ' == board[2][2]):
+		cord3 = (2,2)
+	if(' ' == board[2][0]):
+		cord4 = (2,0)
+	if(' ' == board[0][2]):
+		cord4 = (0,2)
+	if(rc3 == 2 and cord3 != 0):
+			return cord3
+	elif(rc4 == 2 and cord4 != 0):
+			return cord4
 	return "No possible wins"
 def find_e_spaces():
 	"""finds and returns any empty spaces on the board"""
