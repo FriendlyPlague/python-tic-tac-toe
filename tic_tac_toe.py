@@ -1,7 +1,7 @@
 import random as rnd
 import sys
 
-"""This is a text based impossible game of tic-tac-toe made by Zachary Gillmore
+"""This is a text based game of tic-tac-toe made by Zachary Gillmore
 There is no way to win the ai will always make you lose or end in a draw"""
 board = [[' ', ' ', ' '],[' ', ' ', ' '],[' ', ' ', ' ']]
 def print_board():
