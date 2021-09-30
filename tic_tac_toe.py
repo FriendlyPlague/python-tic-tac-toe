@@ -1,8 +1,7 @@
 import random as rnd
 import sys
 
-"""This is a text based game of tic-tac-toe made by Zachary Gillmore
-There is no way to win the ai will always make you lose or end in a draw"""
+"""This is a text based game of tic-tac-toe made by Zachary Gillmore"""
 board = [[' ', ' ', ' '],[' ', ' ', ' '],[' ', ' ', ' ']]
 def print_board():
 	"""prints the current board state"""
@@ -101,14 +100,6 @@ def ai_move(p):
 	if(p == 'O'):
 		if((1,1) in e_space):
 			return (1,1)
-		elif((0,1) in e_space):
-			return (0,1)
-		elif((1,0) in e_space):
-			return (1,0)
-		elif((1,2) in e_space):
-			return (1,2)
-		elif((2,1) in e_space):
-			return (2,1)
 		else:
 			return rnd.choice(e_space)
 	elif(((0,0) in e_space)):
