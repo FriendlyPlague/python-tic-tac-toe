@@ -102,22 +102,38 @@ def ai_move(p):
 		if((1,1) in e_space):
 			return (1,1)
 		elif(board[1][1] == 'X'):
-			if((0,0) in e_space):
+			if((0,0) in e_space and (2,2) in e_space):
 				return (0,0)
-			elif((2,0) in e_space):
+			elif((2,0) in e_space and (0,2) in e_space):
 				return (2,0)
-			elif((0,2) in e_space):
+			elif((0,2) in e_space and (2,0) in e_space):
 				return (0,2)
-			elif((2,2) in e_space):
+			elif((2,2) in e_space and (0,0) in e_space):
 				return (2,2)
-		elif((0,1) in e_space):
+			elif((0,1) in e_space and (2,1) in e_space):
+				return (0,1)
+			elif((1,0) in e_space and (1,2) in e_space):
+				return (1,0)
+			elif((1,2) in e_space and (1,0) in e_space):
+				return (1,2)
+			elif((2,1) in e_space and (0,1) in e_space):
+				return (2,1)
+		elif((0,1) in e_space and (2,1) in e_space):
 			return (0,1)
-		elif((1,0) in e_space):
+		elif((1,0) in e_space and (1,2) in e_space):
 			return (1,0)
-		elif((1,2) in e_space):
+		elif((1,2) in e_space and (1,0) in e_space):
 			return (1,2)
-		elif((2,1) in e_space):
+		elif((2,1) in e_space and (0,1) in e_space):
 			return (2,1)
+		elif((0,0) in e_space and (2,2) in e_space):
+			return (0,0)
+		elif((2,0) in e_space and (0,2) in e_space):
+			return (2,0)
+		elif((0,2) in e_space and (2,0) in e_space):
+			return (0,2)
+		elif((2,2) in e_space and (0,0) in e_space):
+			return (2,2)
 		else:
 			return rnd.choice(e_space)
 	elif(((0,0) in e_space)):
